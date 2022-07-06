@@ -1,4 +1,3 @@
-import { number } from 'prop-types';
 import { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Filtros from './components/Filtros'
@@ -19,7 +18,8 @@ function App() {
   const [gastoEditar, setGastoEditar] = useState({});
 
   const [filtro, setFiltro] = useState('');
-  const [gastosFiltrafos, setGastosFiltrados] = useState('');
+
+  const [gastosFiltrados, setGastosFiltrados] = useState([]);
 
   useEffect(() => {
     if (Object.keys(gastoEditar).length > 0) {
@@ -122,7 +122,7 @@ function App() {
               setGastoEditar={setGastoEditar}
               eliminarGasto={eliminarGasto}
               filtro={filtro}
-              gastosFiltrados={gastosFiltrafos}
+              gastosFiltrados={gastosFiltrados}
             />
           </main>
           <div className='nuevo-gasto'>
