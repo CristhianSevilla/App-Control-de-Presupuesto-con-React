@@ -5,7 +5,7 @@ const Header = ({  gastos, setGastos, presupuesto, setPresupuesto, isValidPresup
 
     return (
         <header>
-            <h1>Planificador de Gastos</h1>
+            <h1 className="contenedor">Planificador de Gastos</h1>
 
             {isValidPresupuesto ? (
                 <ControlPresupuesto
